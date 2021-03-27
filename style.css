@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6, p {
 
   width: 100%;
   height: 100%;
+  min-height: 900px;
 }
 
 .container {
@@ -30,6 +31,10 @@ h1, h2, h3, h4, h5, h6, p {
   max-height: 1000px;
   margin: auto;
   padding-bottom: 210px;
+}
+
+.mainMenu {
+  display: none;
 }
 
 .description {
@@ -64,9 +69,11 @@ h1, h2, h3, h4, h5, h6, p {
 .difficulty__item {
   position: relative;
   cursor: pointer;
+  display: block;
+  width: 200px;
 }
 
-.active::after {
+.difficulty__item_active::after {
   content: '';
   display: block;
   position: absolute;
@@ -122,4 +129,39 @@ h1, h2, h3, h4, h5, h6, p {
   right: 120px;
   bottom: -175px;
   transform: rotate(39.26deg);
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.field__card {
+  margin: 24px;
+  position: relative;
+}
+
+.field__card:hover {
+  animation: cardHovered .3s linear forwards;
+  animation-direction: normal;
+}
+
+@keyframes cardHovered {
+  0% {
+    transform: rotate(-2.5deg);
+    top: 0;
+  }
+  50% {
+    transform: rotate(-5deg);
+    top: -10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: rotate(0deg);
+    top: -10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
 }

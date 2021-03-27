@@ -8,39 +8,54 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="">
 </head>
 <body>
 
   <div class="wrapper">
     <div class="container">
-      <div class="description">
-        <h2 class="description__title">Выберите уровень сложности:</h2>
-        <p class="description__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт</p>
-      </div>
 
-      <div class="difficulty">
-        <div class="difficulty__item easy active">Простой</div>
-        <div class="difficulty__item medium">Средний</div>
-        <div class="difficulty__item hard">Сложный</div>
-      </div>
-
-      <button class="startGame">Начать игру</button>
-
-      <div class="cardsPreview">
-        <div class="cardOne">
-          <img src="img/Card.png" alt="">
+      <div class="mainMenu">
+        <div class="description">
+          <h2 class="description__title">Выберите уровень сложности:</h2>
+          <p class="description__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт</p>
         </div>
-        <div class="cardTwo">
-          <img src="img/Card.png" alt="">
+
+        <div class="difficulty">
+          <div class="difficulty__item easy difficulty__item_active">Простой</div>
+          <div class="difficulty__item medium">Средний</div>
+          <div class="difficulty__item hard">Сложный</div>
         </div>
+
+        <button class="startGame">Начать игру</button>
+
+        <div class="cardsPreview">
+          <div class="cardOne">
+            <img src="img/Card.png" alt="">
+          </div>
+          <div class="cardTwo">
+            <img src="img/Card.png" alt="">
+          </div>
+        </div>
+    </div>    
+    </div>
+
+    
+    <div class="field">
+      <div class="field__card">
+        <img src="img/Card.png" alt="">
       </div>
+      <div class="field__card">
+        <img src="img/Card.png" alt="">
+      </div>
+      <div class="field__card">
+        <img src="img/Card.png" alt="">
+      </div>
+    </div>
     </div>
   </div>
 
 
-
-
-
-
+<script src="app.js"></script>
 </body>
 </html>
