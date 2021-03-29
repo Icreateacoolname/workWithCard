@@ -156,7 +156,8 @@ h1, h2, h3, h4, h5, h6, p {
   animation: cardHovered .3s linear forwards;
   animation-direction: normal;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-  transition: box-shadow .2s linear;
+  transition: box-shadow, transform .2s linear;
+  transform: preserve-3d;
 }
 
 @keyframes cardHovered {
@@ -172,4 +173,17 @@ h1, h2, h3, h4, h5, h6, p {
     transform: rotate(0deg);
     top: -10px;
   }
+}
+
+.card__front, .card__back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card__back {
+  /* transform: rotateY(180deg); */
+}
+
+.field__card_active {
+  transform: rotate(-180deg);
 }
